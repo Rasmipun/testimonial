@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+:root{
+    width: 1100px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+html{
+    background-color: rgb(244, 251, 252);
+   --Moderate-violet: hsl(263, 55%, 52%);
+   --light-grayish-blue: hsl(215, 37%, 88%);
+   --light-dark-grayish-blue: hsl(240, 6%, 74%);
+   --White: hsl(0, 0%, 100%);
+   --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+   --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area:            
+    "first first second third"            
+    "fourth fifth fifth third";
+    border-radius: 10px;
+    row-gap: 25px;
+    column-gap: 25px;
+}
+
+
+.el{
+    border-radius: 10px;
+}
+
+.el:first-child{
+    grid-column: span 2;
+}
+
+.first{
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: var(--Moderate-violet);
+    border-radius: 10px;
+    height: 350px;
+    padding: 30px;
+}
+
+.img1{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 1.1em ;
+    padding: 2px;
+}
+
+.pname{
+    padding-left: 20px;
+    color: var(--light-grayish-blue);
+    font-size: 15px;
+}
+
+.verify{
+    padding-left: 59px;
+    color: var(--light-dark-grayish-blue);
+    font-size: 12px;
+}
+
+h1{
+    padding-top: 15px;
+    font-size: 1.2rem;
+    color: aliceblue;
+}
+
+.p1{
+    padding-top: 10px;
+    font-size: 1rem;
+    color: var(--light-grayish-blue);
+}
+
+.el:nth-child(2){
+    background-color: aqua;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: var(--Very-dark-grayish-blue);
+}
+
+.img2{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 1.1em ;
+    padding: 2px;
+}
+
+.pname1{
+    color: var(--light-grayish-blue);
+    padding-left: 20px;
+}
+
+.verify1{
+    color: var(--light-dark-grayish-blue);
+    padding-left: 59px;
+}
+
+h2{
+    padding-top: 15px;
+    font-size: 1.2rem; 
+    color: aliceblue;  
+}
+
+.p2{
+    padding-top: 10px;
+    font-size: 1rem;
+    color: var(--light-grayish-blue);
+}
+
+.el:nth-child(3){
+    grid-row-start: span 2;
+}
+
+.second{
+    background-color: var(--White);
+    border-radius: 15px;
+    padding-top: 30px;
+    padding: 30px;
+}
+
+.img3{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 1em;
+}
+
+.pname2{
+    color: black;
+    padding-left: 20px;
+}
+
+.verify2{
+    color: var(--light-dark-grayish-blue);
+    padding-left: 54px;
+}
+
+h3{
+    padding-top: 15px;
+    font-size: 1.2rem;  
+    color: black; 
+}
+
+.p3{
+    padding-top: 10px;
+    font-size: 1rem;
+    color: rgb(175, 165, 165);
+}
+
+.el:nth-child(4){
+    background-color: white;
+    padding: 30px;
+}
+
+.img4{
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    border-radius: 1em;
+}
+
+.pname3{
+    color: black;
+    padding-left: 20px;
+}
+
+.verify3{
+    color: var(--light-dark-grayish-blue);
+    padding-left: 58px;
+}
+
+h4{
+    padding-top: 15px;
+    font-size: 1.2rem; 
+    color: rgb(41, 40, 40);
+}
+
+.p4{
+    padding-top: 10px;
+    font-size: 1rem;
+    color: rgb(190, 184, 184);
+}
+
+.el:nth-child(5){
+    grid-column: span 2;
+}
+
+.third{
+    background-color: var(--Very-dark-blackish-blue);
+    border-radius: 15px;
+    padding-top: 30px;
+    padding: 30px;
+}
+
+.img5{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 1em;
+}
+
+.pname4{
+    color: var(--light-grayish-blue);
+    padding-left: 20px;
+}
+
+.verify4{
+    color: var(--light-dark-grayish-blue);
+    padding-left: 54px;
+}
+
+h5{
+    padding-top: 15px;
+    font-size: 1.2rem; 
+    color: rgb(173, 200, 223);
+}
+
+.p5{
+    padding-top: 10px;
+    font-size: 1rem;
+    color: var(--light-grayish-blue);
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: 500px;
+    }
+}
+    

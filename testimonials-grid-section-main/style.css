@@ -24,7 +24,7 @@ html{
 .container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-area:            
+    grid-template-areas:            
     "first first second third"            
     "fourth fifth fifth third";
     border-radius: 10px;
@@ -39,6 +39,7 @@ html{
 
 .el:first-child{
     grid-column: span 2;
+    grid-area: first;
 }
 
 .first{
@@ -83,7 +84,9 @@ h1{
     color: var(--light-grayish-blue);
 }
 
+
 .el:nth-child(2){
+    grid-area: second;
     background-color: aqua;
     padding-top: 30px;
     padding-left: 30px;
@@ -122,6 +125,7 @@ h2{
 }
 
 .el:nth-child(3){
+    grid-area: third;
     grid-row-start: span 2;
 }
 
@@ -162,6 +166,7 @@ h3{
 }
 
 .el:nth-child(4){
+    grid-area: fourth;
     background-color: white;
     padding: 30px;
 }
@@ -196,6 +201,7 @@ h4{
 }
 
 .el:nth-child(5){
+    grid-area: fifth;
     grid-column: span 2;
 }
 
@@ -231,13 +237,19 @@ h5{
 
 .p5{
     padding-top: 10px;
-    font-size: 1rem;
-    color: blue;
+    font-size: 2rem;
+    color: var(--light-grayish-blue);
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .container{
-        width: 500px;
+        padding: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "first"
+        "second"
+        "third"
+        "fourth"
+        "fifth";
     }
 }
-    
